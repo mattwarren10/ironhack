@@ -31,7 +31,6 @@ class Sandwich
 end
 
 class Ingredients
-	attr_reader :ingredient
 	def initialize (ingredient)
 		@ingredient = ingredient
 	end
