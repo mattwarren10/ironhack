@@ -25,7 +25,7 @@ end
 
 sony = TV.new("Sony", "2007", "1080P")
 mbp = Computer.new("Apple", "2010", "4GB of 1066MHz DDR3 memory")
-hp = Computer.new("HP", "2007", "4GB of 1066MHz DDR3 memory")
+hp = Computer.new("HP", "2007", "2GB of 1066MHz DDR3 memory")
 
 print sony.manuf, " ", sony.yr, " ", sony.resolu, "\n"
 print hp.manuf, " ", hp.yr, "\n"

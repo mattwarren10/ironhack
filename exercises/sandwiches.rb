@@ -10,10 +10,10 @@ class Purchase
   def checkout
   	total_cost = 0
   	@items.each do |item|
-	  print item.name, " ", item.price, "\n"
-	  print item.ingredients
-	  total_cost += item.price
-	end
+	    print item.name, " ", item.price, "\n"
+	    print item.ingredients
+	    total_cost += item.price
+	  end
   end
 end
 
