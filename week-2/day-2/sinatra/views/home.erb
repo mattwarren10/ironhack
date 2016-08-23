@@ -1,3 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/styles.css">
 <h1>Welcome to our company's website</h1>
 
-<p>My first Sinatra app. <a href='/company'>See company page.</a><br><a href='/about'>Discover what we are all about.</a>"</p>
+<p>My first Sinatra app.</p>
+<ul>
+	<li><a href='/about'>Discover what we are all about.</a></li>
+	<li><a href='/company'>See company page.</a></li>
+	<li><a href="/pizza">See our favorite ingredients for pizza</a></li>
+	<li><a href="/users/celinedion">Visit Celine Dion's page</a></li>
+	<li><a href="/users/starwars">Visit Star Wars' page</a></li>
+	<li><a href="/users/webdevmattw">Visit Matt's page</a></li>
+</ul>
+<% if Date.today.tuesday? %>
+	<p>Izzy Ironside is NOT a fan of Tuesdays like today.</p>
+<% end %>
+
+<p> Izzy Ironside was born on 
+	<%= Date.today %>
+</p>
+
