@@ -1,6 +1,8 @@
 require "sinatra"
 require_relative("lib/calculator.rb")
 
+
+
 calculator = Calculator.new
 
 
@@ -19,6 +21,10 @@ end
 post "/calculate_add" do
   @result = calculator.add(params[:first_number].to_f, params[:second_number].to_f).to_s
   erb :calculate_add
+
+  # File.open("items.json","w") do |f|
+  # f.write(items_array.to_json)
+end
 end
 
 ######################## SUBTRACT ########################
@@ -42,7 +48,6 @@ end
 
 post "/calculate_multiply" do
   @result = calculator.multiply(params[:first_number].to_f, params[:second_number].to_f)
-
   erb :calculate_multiply
 end
 
