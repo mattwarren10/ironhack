@@ -9,6 +9,8 @@
 	<li><a href="/users/celinedion">Visit Celine Dion's page</a></li>
 	<li><a href="/users/starwars">Visit Star Wars' page</a></li>
 	<li><a href="/users/webdevmattw">Visit Matt's page</a></li>
+	<li><a href="/leadership">Charzard</a></li>
+	<li><a href="/users/shaq">Shaq</a></li>
 </ul>
 <% if Date.today.tuesday? %>
 	<p>Izzy Ironside is NOT a fan of Tuesdays like today.</p>
@@ -17,4 +19,9 @@
 <p> Izzy Ironside was born on 
 	<%= Date.today %>
 </p>
+
+<small>
+	Currently in the session:
+	<b><%= session[:saved_value] %></b>
+</small>
 

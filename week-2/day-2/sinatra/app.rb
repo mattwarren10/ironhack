@@ -1,4 +1,8 @@
 require "sinatra"
+require "sinatra/reloader" if development?
+require "pry"
+
+enable(:sessions)
 
 get "/" do 
 
@@ -29,7 +33,8 @@ end
 users = [
 	{ :username => "starwars", 		:name => "Star Wars", 	:bio => "The official home of Star Wars on Twitter.", 			:avatar => "/starwars.jpg" },
 	{ :username => "celinedion", 	:name => "Celine Dion", :bio => "Posts signed / Publications signées TC = Team Céline", :avatar => "/celinedion.jpg" },
-	{ :username => "webdevmattw", 	:name => "Matt Warren", :bio => "Visit mattwarren.us", 									:avatar => "/mattwarren.jpg" }
+	{ :username => "webdevmattw", 	:name => "Matt Warren", :bio => "Visit mattwarren.us", 									:avatar => "/mattwarren.jpg" },
+	{ :username => "shaq", 			:name => "SHAQ", 		:bio => "VERY QUOTATIOUS, I PERFORM RANDOM ACTS OF SHAQNESS", 	:avatar => "/shaq.jpg" }
 
 ]
 
@@ -50,7 +55,10 @@ get "/users/:username" do
 # => 																  |
 
 	@the_user = users.find { |the_user| the_user[:username] == @user_name_string }
+
+
 	if @the_user == nil
+		status(404)
 		erb :no_user
 	else
 		erb :user_profile
@@ -58,10 +66,19 @@ get "/users/:username" do
 end
 
 
+get "/leadership" do 
 
+	erb :leadership
+end
 
+get "/session_text/:text" do
+	text = params[:text]
+	session[:saved_value] = text
+end
 
-
+get "/session_show" do
+	"Now in the session: " + session[:saved_value]
+end
 
 
 
