@@ -1,0 +1,6 @@
+<h1>Welcome to the TodoList</h1>
+<% @todo_list.tasks.each do |task| %>
+<ul>
+	<li><%= task.content %></li>
+</ul>
+<% end %>
