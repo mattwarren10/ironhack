@@ -23,3 +23,17 @@ get "/" do
 
 	erb :task_index
 end
+
+get "/new_task" do
+
+	erb :new_task
+
+end
+
+post "/create_task" do
+	value = params[:new_task]
+	@task = Task.new(value)
+	@todo_list = todo_list	
+	@todo_list.add_task(@task)
+	redirect "/"
+end
