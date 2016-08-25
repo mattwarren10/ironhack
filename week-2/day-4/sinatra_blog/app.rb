@@ -42,3 +42,10 @@ get "/categories" do
 
 	erb :categories
 end
+
+get "/authors" do 
+	@blog = my_blog
+	@posts = @blog.posts
+
+	erb :authors
+end
