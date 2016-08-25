@@ -1,0 +1,8 @@
+<h1>Mark Task As Complete</h1>
+<% @todo_list.tasks.each do |task| %>
+<ul>
+	<li><%= task.content %></li>
+</ul>
+<% end %>
+<a href="/new_task">Add new task</a>
+<a href="/">Back</a>
