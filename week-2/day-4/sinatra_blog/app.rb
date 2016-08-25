@@ -20,3 +20,16 @@ get "/post_details/:id" do
 	@post = my_blog.posts[params[:id].to_i]
 	erb :post_details
 end
+
+get "/new_post" do
+
+	erb :new_post
+end
+
+post "/create_post" do
+	@title = params[:title]
+	@text = params[:text]
+	@post = Post.new(@title, Time.now, @text)
+	@blog = my_blog.add_post(@post)
+	redirect "/"
+end
