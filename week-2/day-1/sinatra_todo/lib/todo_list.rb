@@ -1,7 +1,8 @@
 class TodoList
     attr_reader :tasks
-    def initialize
+    def initialize(user)
         @tasks = []
+        @user = user
     end
 
     def add_task(t)

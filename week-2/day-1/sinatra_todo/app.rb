@@ -11,7 +11,7 @@ feed = Task.new("Feed the pig")
 rob = Task.new("Rob the bank")
 help = Task.new("Help the old lady cross the street")
 
-todo_list = TodoList.new
+todo_list = TodoList.new("Matt")
 todo_list.add_task(walk)
 todo_list.add_task(feed)
 todo_list.add_task(rob)

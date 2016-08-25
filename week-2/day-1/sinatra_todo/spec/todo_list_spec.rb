@@ -3,8 +3,9 @@ require_relative("../lib/task.rb")
 
 RSpec.describe TodoList do 
 	before :each do
-		@todo_list = TodoList.new
+		@todo_list = TodoList.new("Matt")
 		@task = Task.new("Walk the dog")
+		
 	end
 	describe "using todo_list" do
 		it "expects todo_list to equal an empty array" do
