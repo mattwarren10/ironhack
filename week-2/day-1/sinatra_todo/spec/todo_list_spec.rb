@@ -21,14 +21,17 @@ RSpec.describe TodoList do
 		end
 		it "goes through the list of tasks and finds one by its id" do
 			@todo_list.add_task(@task)
-			expect(@todo_list.find_task_by_id(@task.id)).to eq(@task.content)
+			expect(@todo_list.find_task_by_id(@task.id)).to eq(@task)
 		end
 
 		it "takes @tasks from todolist, sorts it by date, and returns a new array of sorted tasks" do
-			task1 = Task.new("Feed the pig")
-			task2 = Task.new("Walk the dog")
-			task3 = Task.new("Rob the bank")
-			sorted_tasks = [task3, task2, task1]
+			@task1 = Task.new("Feed the pig")
+			@task2 = Task.new("Walk the dog")
+			@task3 = Task.new("Rob the bank")
+			@todo_list.add_task(@task1)
+			@todo_list.add_task(@task2)
+			@todo_list.add_task(@task3)
+			sorted_tasks = [@task1, @task2, @task3]
 			expect(@todo_list.sort_by_created).to eq(sorted_tasks)
 		end
 	end

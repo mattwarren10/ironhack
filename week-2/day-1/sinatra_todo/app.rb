@@ -39,8 +39,8 @@ post "/create_task" do
 end
 
 get "/complete/:id" do
-	task = @todo_list.find_task_by_id(params[:id].to_i)
-	task.complete!
+	@task = todo_list.find_task_by_id(params[:id].to_i)
+	@task.complete!
 	redirect "/"
 end
 

@@ -15,13 +15,15 @@ class TodoList
     end
 
     def find_task_by_id(id)
+        found_task = nil
     	@tasks.each do |task|
     		if task.id == id
-    			return task.content
+                found_task = task
     		else 
     			nil
     		end
     	end
+        found_task
     end
 
     def sort_by_created
