@@ -31,9 +31,16 @@ get "/new_task" do
 end
 
 post "/create_task" do
-	value = params[:new_task]
-	@task = Task.new(value)
+	key = params[:new_task]
+	@task = Task.new(key)
 	@todo_list = todo_list	
 	@todo_list.add_task(@task)
 	redirect "/"
 end
+
+get "/complete/:id" do
+	task = @todo_list.find_task_by_id(params[:id].to_i)
+	task.complete!
+	redirect "/"
+end
+

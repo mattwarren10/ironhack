@@ -9,7 +9,7 @@ RSpec.describe Task do
 			expect(@task.content).to eq("Walk the dog")
 		end		
 		it "makes sure a task receives an id" do
-			expect(@task.id).to eq(1)
+			expect(@task.id).to eq(2)
 		end
 		it "initiates an incomplete task" do
 			expect(@task.completed?).to eq(false)
