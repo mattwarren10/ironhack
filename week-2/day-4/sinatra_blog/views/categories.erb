@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="/main.css">
+<div class="margin-10">Categories:</div>
+<% @posts.each do |post| %>
+	<div class="margin-10"><%= post.category %></div><br>
+<% end %>
+
+<a href="/">Go back</a>	

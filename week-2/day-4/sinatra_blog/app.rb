@@ -35,3 +35,10 @@ post "/create_post" do
 	@blog = my_blog.add_post(@post)
 	redirect "/"
 end
+
+get "/categories" do 
+	@blog = my_blog
+	@posts = @blog.posts
+
+	erb :categories
+end
