@@ -2,11 +2,9 @@ class Movies
 	attr_reader :movies, :movie_years
 		def initialize
 		@movies = []
+		@movie_years = []
 	end
-	def add_movies(m)
-		@movies.push(m)
-	end
-
+	
 	def search(movie)
 		the_search = Imdb::Search.new(movie)
 		@movies = the_search.movies.take(9)
@@ -16,6 +14,7 @@ class Movies
 		@movies.each do |the_movie| 
 			@movie_years.push(the_movie.year)
 	 	end 
+	 	year = @movie_years.sample
 	end
 
 
