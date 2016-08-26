@@ -1,16 +1,12 @@
 <link rel="stylesheet" type="text/css" href="/normalize.css">
 <link rel="stylesheet" type="text/css" href="/main.css">
 <h1> Movie Trivia </h1>
-<p> Showing <strong> <%= @movie_posters.length %></strong> results.</p>
-<% @movie_posters.each do |poster| %>
-	<% if @correct_movie_poster == poster %>
-		<img src="<%= poster %>" onclick="alert('CORRECT')">
-	<% else %>
-		<img src="<%= poster %>" onclick="alert('INCORRECT')">
-	<% end %>
+<p> Showing <strong> <%= @movies.length %></strong> results.</p>
+<% @movies.each do |movie| %>
+	<img src="<%= movie.poster %>">
 <% end %>
 
-<p>Which movie was filmed in <%= @random_movie_year %>? (Click one)</p>
+<p>Which movie was filmed in <%= @year %>? (Click one)</p>
 <a href="/">Go back</a>
 
 
