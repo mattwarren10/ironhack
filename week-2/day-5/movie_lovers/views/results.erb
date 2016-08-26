@@ -1,5 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/normalize.css">
+<link rel="stylesheet" type="text/css" href="/main.css">
 <h1> Movie Trivia </h1>
-<p> Showing <strong> <%= @movies.length %></strong> results.</p>
+<% movie_posters = [] %>
 <% @movies.each do |the_movie| %>
-	<img src="<%= the_movie.poster %>">
+	<% movie_posters.push(the_movie.poster) %>
+	<% break if movie_posters.length == 9 %>
 <% end %>
+
+<% movie_posters.each do |the_poster| %>
+	<img src="<%= the_poster %>">
+<% end %>
+<br>
+<p> Showing <strong> <%= movie_posters.length %></strong> results.</p>
+<br>
+<a href="/">Go back</a>
