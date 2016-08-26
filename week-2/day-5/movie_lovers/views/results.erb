@@ -3,10 +3,13 @@
 <h1> Movie Trivia </h1>
 <p> Showing <strong> <%= @movies.length %></strong> results.</p>
 <% @movies.each do |movie| %>
-	<img src="<%= movie.poster %>">
+	<% if movie.year == @year %>
+		<img src="<%= movie.poster %>" onclick="alert('Correct!')">
+	<% else %>
+		<img src="<%= movie.poster %>" onclick="alert('Incorrect!')">
+	<% end %>
 <% end %>
 
 <p>Which movie was filmed in <%= @year %>? (Click one)</p>
 <a href="/">Go back</a>
-
 
