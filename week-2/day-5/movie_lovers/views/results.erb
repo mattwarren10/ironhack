@@ -1,16 +1,16 @@
 <link rel="stylesheet" type="text/css" href="/normalize.css">
 <link rel="stylesheet" type="text/css" href="/main.css">
 <h1> Movie Trivia </h1>
-<% movie_posters = [] %>
-<% @movies.each do |the_movie| %>
-	<% movie_posters.push(the_movie.poster) %>
-	<% break if movie_posters.length == 9 %>
+<p> Showing <strong> <%= @movie_posters.length %></strong> results.</p>
+<% @movie_posters.each do |poster| %>
+	<% if @correct_movie_poster == poster %>
+		<img src="<%= poster %>" onclick="alert('CORRECT')">
+	<% else %>
+		<img src="<%= poster %>" onclick="alert('INCORRECT')">
+	<% end %>
 <% end %>
 
-<% movie_posters.each do |the_poster| %>
-	<img src="<%= the_poster %>">
-<% end %>
-<br>
-<p> Showing <strong> <%= movie_posters.length %></strong> results.</p>
-<br>
+<p>Which movie was filmed in <%= @random_movie_year %>? (Click one)</p>
 <a href="/">Go back</a>
+
+
