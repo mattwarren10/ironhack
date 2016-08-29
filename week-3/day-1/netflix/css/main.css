@@ -1,0 +1,37 @@
+body {
+	color: #fff;
+	
+}
+
+h1 {
+	padding: 20px;
+	font-size: 60px;
+}
+
+.netflix-bg {
+	background: url("../images/family.jpg") repeat 0 0;
+	height: 670px;
+	
+}
+
+.netflix-logo {
+	display: inline;
+	width: 220px;
+}
+
+.sign-in {
+	background-color: rgb(226, 18, 33);
+	font-size: 20px;
+	color: #fff;
+	display: inline;
+	float: right;
+	border: none;
+	padding: 15px 50px;
+	margin: 30px;
+}
+
+.fifty-opaque {
+	background-color: rgba(0, 0, 0, .5);
+	margin: auto;
+	width: 65%;
+}
