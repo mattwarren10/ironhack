@@ -1,0 +1,60 @@
+body {
+	background-color: #000;
+	color: #fff
+}
+
+header {
+	background-color: #000;
+	height: 100px;
+}
+
+h1 {
+	margin: 0;
+	font-size: 54px;
+	text-shadow: 3px 3px 1px #444; 
+}
+
+.margin-auto {
+	width: 20%;
+	margin: auto;
+}
+
+.netflix-header {
+	margin-top: -10px;
+	height: 125px;
+}
+
+.landing {
+	background: url("../images/landing.jpg");
+	background-size: 100% auto;
+	min-height: 600px;
+	width: 100%;
+}
+
+.container {
+	width: 30%;
+	padding-left: 80px;
+	padding-top: 60px;
+	display: inline-block;
+}
+
+.content {
+	font-size: 18px;
+}
+
+.play-image {
+	width: 125px;
+	text-align: right;
+	margin-top: -30px;
+	position: absolute;
+	top: 350px;
+	left: 560px;
+}
+
+.button {
+	background-color: #fff;
+	border: none;
+	color: #f00000;
+	padding: 12px 50px;
+}
+

@@ -38,6 +38,8 @@ h3 {
 }
 
 .netflix-logo {
+	margin-top: -10px;
+	margin-left: 30px;
 	display: inline;
 	width: 220px;
 }
@@ -45,13 +47,13 @@ h3 {
 .sign-in {
 	background-color: rgb(226, 18, 33);
 	font-family: ProximaNova-Light;
-	font-size: 20px;
+	font-size: 24px;
 	color: #fff;
 	display: inline;
 	float: right;
 	border: none;
 	padding: 15px 50px;
-	margin: 30px;
+	margin: 25px 30px 30px 30px;
 }
 
 .fifty-opaque {
@@ -72,14 +74,17 @@ h3 {
 	display: block;
 
 }
+.movie-posters-div {
+	display: block;
+}
 
 .movie-posters-ul {
 	list-style-type: none;
 }
 
 .movie-posters {
-	display: inline;
-	float: left;
+	display: inline-block;
+	/*float: left;*/
 }
 
 li img {
@@ -87,6 +92,16 @@ li img {
 	margin-left: 75px;
 }
 
+.footer {
+	position: relative;
+	height: 40px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #000;
+	text-align: center;
+}
 
 
 
