@@ -1,3 +1,18 @@
+@font-face {
+font-family: ProximaNova-Light;
+src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNova-Reg;
+src: url("../fonts/ProximaNova-Reg.otf") format("opentype");
+}
+
+@font-face {
+font-family: ProximaNova-Sbold;
+src: url("../fonts/ProximaNova-Sbold.otf") format("opentype");
+}
+
 body {
 	color: #fff;
 	
@@ -6,11 +21,13 @@ body {
 h1 {
 	padding: 0 20px;
 	font-size: 60px;
+	font-family: ProximaNova-Reg;
 }
 
 h3 {
+	font-family: ProximaNova-Sbold;
 	padding-left: 90px;
-	color: #444;
+	color: #222;
 	font-size: 32px;
 }
 
@@ -27,6 +44,7 @@ h3 {
 
 .sign-in {
 	background-color: rgb(226, 18, 33);
+	font-family: ProximaNova-Light;
 	font-size: 20px;
 	color: #fff;
 	display: inline;
@@ -38,12 +56,13 @@ h3 {
 
 .fifty-opaque {
 	background-color: rgba(0, 0, 0, .5);
-	margin: auto;
+	margin: 75px auto;
 	width: 65%;
 	padding: 20px 0;
 }
 
 .free-month {
+	font-family: ProximaNova-Light;
 	font-size: 24px;
 	padding: 15px 50px;
 	margin: auto;
