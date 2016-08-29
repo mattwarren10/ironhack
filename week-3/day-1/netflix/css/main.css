@@ -4,8 +4,14 @@ body {
 }
 
 h1 {
-	padding: 20px;
+	padding: 0 20px;
 	font-size: 60px;
+}
+
+h3 {
+	padding-left: 90px;
+	color: #444;
+	font-size: 32px;
 }
 
 .netflix-bg {
@@ -34,4 +40,35 @@ h1 {
 	background-color: rgba(0, 0, 0, .5);
 	margin: auto;
 	width: 65%;
+	padding: 20px 0;
 }
+
+.free-month {
+	font-size: 24px;
+	padding: 15px 50px;
+	margin: auto;
+	background-color: rgb(70, 157, 246);
+	border: none;
+	color: #fff;
+	display: block;
+
+}
+
+.movie-posters-ul {
+	list-style-type: none;
+}
+
+.movie-posters {
+	display: inline;
+	float: left;
+}
+
+li img {
+	width: 150px;
+	margin-left: 75px;
+}
+
+
+
+
+
