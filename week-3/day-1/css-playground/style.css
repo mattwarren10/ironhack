@@ -1,0 +1,37 @@
+body {
+	color: #fff;
+}
+
+.direction {
+	padding: 20px;
+}
+
+.box {
+	margin: 10px;
+}
+
+.blue {
+	background-color: #006496;
+	border: solid #c04c4c 5px;
+}
+
+#red {
+	background-color: #c04c4c;
+	border: solid #006496 5px;
+}
+
+.green {
+	background-color: #11ffaa;
+	position: absolute;
+	top: 350px;
+	left: 350px;
+	color: #000
+}
+
+#bottom {
+	background-color: #006496;
+	position: absolute;
+	top: 400px;
+	left: 500px;
+	color: #000
+}
