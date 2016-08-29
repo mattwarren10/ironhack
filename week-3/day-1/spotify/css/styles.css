@@ -1,0 +1,176 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+nav{
+	height:70px;
+	background-color: #fff;
+}
+
+nav ul {
+	float: right;
+
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 70px;
+	margin:0px 10px;
+}
+
+nav img{
+	height:70px;
+	float:left;
+	padding:15px;
+}
+
+.landing {
+	background-image: url(../images/Landing.jpg);
+	background-size: cover;
+
+	background-position: 50px -200px;
+	height:600px;
+}
+
+.landing h1{
+	color:#fff;
+	font-size: 72px;
+	text-align: center;
+	padding-top:250px;
+	font-weight: 700;
+
+}
+
+.landing p{
+
+	color:#fff;
+	text-align: center;
+	font-size: 28px;
+	margin:20px;
+}
+
+.features {
+	padding:30px;
+	height:100%;
+	
+}
+
+.features h2{
+	font-size: 36px;
+	text-align: center;
+	font-weight: 700;
+	padding:5%;
+}
+
+.features span {
+	border-bottom: 3px solid #1BB26C;
+}
+
+
+
+.features img {
+	height:100px;
+	display: block;
+	margin:0 auto;
+	padding:20px;
+}
+
+.features h3{
+	font-size: 24px;
+	text-align: center;
+	color:#1BB26C;
+	margin-bottom:30px;
+	font-weight: 700;
+}
+
+.features p{
+	font-size: 22px;
+	text-align: center;
+
+}
+
+.wrapper {
+	position:relative;
+	background-color:#1BB26C; 
+	margin:30px;
+	height:600px;
+	margin-top:100px;
+}
+
+.functions{
+	padding:50px;
+}
+
+.wrapper .functions h2{
+	font-size: 36px;
+	color:#fff;
+	margin-bottom:50px;
+	font-weight: 700;
+}
+
+.wrapper .functions span{
+	border-bottom:3px solid #fff;
+}
+
+.wrapper .functions h3 {
+	color:#fff;
+	padding:20px 0px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.wrapper .functions p {
+	color:#fff;
+	width:270px;
+	font-size: 22px;
+}
+
+.wrapper .kanye {
+ 
+}
+
+.wrapper .kanye img{
+	position: absolute;
+	right:50px;
+	top:50px;
+	width:300px;
+}
+
+.wrapper .spotify-logo img{
+	position: absolute;
+	right:45%;
+	top:45%;
+	width:100px;
+}
+
+@media ( max-width : 667px ) {
+
+	nav ul li{
+	display: inline-block;
+	line-height: 70px;
+	font-size: 12px;
+	margin:0px 5px;
+	}
+	
+
+	.landing{
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+
+	}
+
+	.landing h1{
+		padding-top:100px;
+	}
+
+	.wrapper{
+		padding-bottom:50px;
+	}
+	.wrapper .kanye img{
+		display: none;
+	}
+
+	.wrapper .spotify-logo img{
+		display: none;
+	}
+}
