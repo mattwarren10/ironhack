@@ -1,0 +1,25 @@
+#header-image {
+	background-image: url("http://www.prepcasts.com/wp-content/uploads/2014/04/BasketballStockImage.jpg");
+	height: 500px;
+}
+
+@media screen and (min-width: 786px) {
+	#header-image {
+	background-image: url("https://cdn2.vox-cdn.com/thumbor/E2DXM0GU--RnaQ2YS0CLFrA5Bt0=/0x0:4375x2917/1310x873/cdn0.vox-cdn.com/uploads/chorus_image/image/50560091/usa-today-9018863.0.jpg");
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+	#header-image {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c3/Jordan_by_Lipofsky_16577.jpg");
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+	#header-image {
+	background-image: url("https://images-na.ssl-images-amazon.com/images/I/51m%2BFFxEtAL._SY355_.jpg");
+	}
+
+}
