@@ -1,19 +1,9 @@
-class ColorCounter 
-	def count_colors(color, color_array)
-		counter = 0
-		color_array.each do |c|
-			if c == color
-				counter+=1
-			end
-		end
-		counter
-	end
-end
+require_relative("lib/color_counter.rb")
 
 color_array = ["indigo", "teal", "lilac", "black", "periwinkle", "baby blue", "periwinkle", "teal"]
-the_counting_machine = ColorCounter.new
-
 p color_array
+
+the_counting_machine = ColorCounter.new
 
 p the_counting_machine.count_colors("indigo", color_array) == 1
 p the_counting_machine.count_colors("periwinkle", color_array) == 2
