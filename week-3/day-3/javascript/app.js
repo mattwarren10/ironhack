@@ -9,3 +9,9 @@ console.log( countColors("periwinkle", colorArray) === 2 );
 console.log( countColors("teal", colorArray) === 2 );
 console.log( countColors("green", colorArray) === 0 );
 console.log( countColors("navy blue", colorArray) === 0 );
+
+var capsColors = colorArray.map(function (theColor) {
+	return theColor.toUpperCase();
+});
+
+console.log(capsColors)

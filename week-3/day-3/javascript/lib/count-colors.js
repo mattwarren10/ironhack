@@ -1,13 +1,10 @@
 function countColors (color, colorArray) {
 	var count = 0;
-	for (i=0; i < colorArray.length; i++) {
-		if (colorArray[i] === color) {
-			count++
+	colorArray.forEach(function(theColor){
+		if (theColor === color) {
+			count += 1
 		}
-		else {
-			false
-		}
-	}
+	})
 	return count
 }
 
