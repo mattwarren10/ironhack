@@ -8,12 +8,7 @@ function fileActions(err, file){
 		return a.episode_number - b.episode_number;
 	});
 	var filteredEpisodes = sortedEpisodes.filter(removeShittyEpisodes);
-    for (var i=0; i < filteredEpisodes.length; i++ ) {
-    	console.log(`Title: ${filteredEpisodes[i].title} Episode #: ${filteredEpisodes[i].episode_number}`);
-    	console.log(`${filteredEpisodes[i].description}`);
-    	console.log(`Rating: ${filteredEpisodes[i].rating} ${ratingToStar(filteredEpisodes[i].rating)}`);	
-    }
-    
+	print(episodes);
 }
 
 function ratingToStar (rating) {
@@ -23,4 +18,23 @@ fs.readFile("./data/data.json", 'utf8', fileActions);
 
 function removeShittyEpisodes (episode) {
 	return episode.rating > 8.5;
+}
+
+function searchFor(episode, string) {
+	if (episode.indexOf(string) === -1 ) {
+		return false;
+	} else {
+		return true;
+	}
+	
+}
+
+function print (episodes) {
+    for (var i=0; i < episodes.length; i++ ) {
+    	console.log(`Title: ${episodes[i].title} Episode #: ${episodes[i].episode_number}`);
+    	console.log(`${episodes[i].description}`);
+    	console.log(`Rating: ${episodes[i].rating} ${ratingToStar(episodes[i].rating)}`);
+    	console.log(`Contains Jon Snow: ${searchFor(episodes[i].description, 'Jon')}`);	
+    	console.log("");
+    }
 }
