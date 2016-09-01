@@ -1,5 +1,7 @@
 function caesarCipher (message, shift) {
 	var splitMessage = [];
+
+	//if shift is not used
 	if (shift === undefined) {
 		shift = -3
 	}
@@ -8,18 +10,17 @@ function caesarCipher (message, shift) {
   	var shiftedCharArr = []
   	splitMessage.forEach(function(c){
   		var characterCode;
+  		characterCode = c.charCodeAt(0);
   		
 
   		//check if each character is a letter
   		if (c.match(/[a-zA-Z]/i)) {
   			//get the character code
-  			characterCode = c.charCodeAt(0);
   			shiftedCharArr.push(characterCode + shift);
 
   		}
   		//if its not, then leave it as is
   		else {
-  			characterCode = c.charCodeAt(0);
   			shiftedCharArr.push(characterCode);
   		}
   	});
