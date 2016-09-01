@@ -1,17 +1,19 @@
 //lib/animal.js
+"use strict";
 
-function Animal(name, noise) {
+class Animal {
+	constructor (name, noise) {
 	this.name = name
 	this.noise = noise
+	} //end
 
-} //end
+	makeNoise () {
+		console.log(this.name + " says: " + this.noise);
+	}
 
-Animal.prototype.makeNoise = function () {
-	console.log(this.name + " says: " + this.noise);
-}
-
-Animal.prototype.shout = function () {
-		console.log(this.name.toUpperCase());
+	shout () {
+			console.log(this.name.toUpperCase());
+	}
 }
 
 module.exports = Animal;
