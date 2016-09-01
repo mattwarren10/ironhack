@@ -10,3 +10,5 @@ class Pit {
 		this.vikings.push(v)
 	}
 }
+
+module.exports = Pit;

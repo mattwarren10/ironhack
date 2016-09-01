@@ -11,6 +11,15 @@ class Viking {
 	epicWarcry () {
 		console.log("Arrrrrrrgggggghhhhh!!!!!")
 	}
+
+	attack (anotherViking) {
+		if (this.strength !== 0) {
+			this.strength--	
+		}
+		
+		anotherViking.health--
+	}
+
 }
 
 module.exports = Viking;
