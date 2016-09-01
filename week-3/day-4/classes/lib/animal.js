@@ -8,11 +8,11 @@ class Animal {
 	} //end
 
 	makeNoise () {
-		console.log(this.name + " says: " + this.noise);
+		console.log(`${this.name} says: ${this.noise}`);
 	}
 
 	shout () {
-			console.log(this.name.toUpperCase());
+		console.log(this.name.toUpperCase());
 	}
 }
 
