@@ -11,8 +11,7 @@ function caesarCipher (message, shift) {
   	splitMessage.forEach(function(c){
   		var characterCode;
   		characterCode = c.charCodeAt(0);
-  		
-
+  	
   		//check if each character is a letter
   		if (c.match(/[a-zA-Z]/i)) {
   			//get the character code
@@ -21,7 +20,14 @@ function caesarCipher (message, shift) {
   		}
   		//if its not, then leave it as is
   		else {
-  			shiftedCharArr.push(characterCode);
+  			if (characterCode < 65 || 90 < characterCode < 97) {
+  				shiftedCharArr.push(characterCode + 26);	
+  			} else if (97 > characterCode > 90 || characterCode > 122) {
+  				shiftedCharArr.push(characterCode - 26);	
+  			} else {
+  				shiftedCharArr.push(characterCode);	
+  			}
+  			
   		}
   	});
   	var cipheredWord = "";
@@ -34,7 +40,7 @@ function caesarCipher (message, shift) {
 
 
 
-var encrypted = caesarCipher("Et tu, brute?");
+var encrypted = caesarCipher("Et tu, brute?", -4);
 
 console.log(encrypted);
 //=> "_orqrp"
