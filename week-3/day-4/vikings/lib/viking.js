@@ -8,6 +8,9 @@ class Viking {
 		this.strength = strength
 	} //end
 
+	epicWarcry () {
+		console.log("Arrrrrrrgggggghhhhh!!!!!")
+	}
 }
 
 module.exports = Viking;
