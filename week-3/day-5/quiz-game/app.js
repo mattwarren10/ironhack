@@ -22,21 +22,24 @@ quiz.addQuestions(steve)
 // console.log(quiz.questions[0])
 // Our options object, the prompt is simply what will appear in the command line when read is called
 
-for (var i=0; i < quiz.questions.length; i++) {
+
+
+	function calculateAnswer (err, answer){
+		if (answer === quiz.questions[0].answer) {
+			quiz.score += quiz.questions[0].pointValue
+		}
+	    console.log("Your score is: " + quiz.score)
+
+	}
+
+	// The prompt itself, passing options, and using our callback function after input
+
 	var options = {
-    	prompt: quiz.questions[0].text
+		prompt: quiz.questions[0].text
 	}
-}
-	
+	read(options, calculateAnswer)
 
-function calculateAnswer (err, answer){
-	if (answer === quiz.questions[0].answer) {
-		quiz.score += quiz.questions[0].pointValue
-	}
-    console.log("Your score is: " + quiz.score)
-}
 
-// The prompt itself, passing options, and using our callback function after input
-read(options, calculateAnswer)
+
 
 // Outputs whatever the user has entered back to the console
