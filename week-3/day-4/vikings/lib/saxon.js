@@ -7,6 +7,12 @@ class Saxon {
 		this.strength = strength
 	} //end
 
+	dead () {
+		if (this.health === 0) {
+			console.log("This Saxon is dead.")
+		}
+	}
+
 }
 
 module.exports = Saxon;
