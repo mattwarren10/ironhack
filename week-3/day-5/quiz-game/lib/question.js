@@ -1,11 +1,12 @@
-// lib/animal.js
+// lib/question.js
 "use strict";
 
 class Question {
-	constructor (text, answer) {
+	constructor (text, answer, pointValue) {
 	this.text = text
 	this.answer = answer
-	this.id = id
+	this.id = 0
+	this.pointValue = pointValue
 	} //end
 }
 
