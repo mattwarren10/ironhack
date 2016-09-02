@@ -20,6 +20,7 @@ class Viking {
 		anotherViking.health--
 	}
 
+
 }
 
 module.exports = Viking;
