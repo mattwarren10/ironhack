@@ -1,0 +1,8 @@
+<form method="post" action="/asciis">
+	<textarea name="textarea[text]"></textarea>
+	<button type="submit">Submit text</button>
+	<input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+
+<%= link_to "Home", "/" %>

@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/miketierney/artii.git
+  revision: ca990704aa7b7ad434ff91ab18c7d0a71bf5871c
+  specs:
+    artii (2.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,7 +45,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.1)
-    artii (2.1.1)
     builder (3.2.2)
     byebug (9.0.5)
     coffee-rails (4.2.1)
@@ -156,7 +161,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  artii
+  artii!
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
