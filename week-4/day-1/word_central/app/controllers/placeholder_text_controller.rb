@@ -5,7 +5,7 @@ class PlaceholderTextController < ApplicationController
 	end
 
 	def create
-		@number = params[:number]
-		@select = params[:select]
+		@number = params[:user][:number]
+		@select = params[:user][:select]
 	end
 end
