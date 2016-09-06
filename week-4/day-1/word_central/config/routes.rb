@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post '/text_inspections', to: 'text_inspections#create'
   get '/asciis/new', to: 'asciis#new'
   post '/asciis', to: 'asciis#create'
+  get '/placeholder_text/new', to: 'placeholder_text#new'
+  post '/placeholder_text', to: 'placeholder_text#create'
 end
