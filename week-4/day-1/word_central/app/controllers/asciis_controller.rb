@@ -1,0 +1,2 @@
+class AsciisController < ApplicationController
+end
