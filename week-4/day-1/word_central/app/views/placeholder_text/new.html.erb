@@ -1,4 +1,14 @@
 <form method="post" action="/placeholder_text">
-	
-	
+	<label for="number">Number:</label>
+	<input type="text" placeholder="number" name="number">
+	<label for="select">Select:</label>
+	<select name="select">
+		<option value="words">Words</option>
+		<option value="paragraphs">Paragraphs</option>
+	</select>
+	<button>Submit</button>
+	<input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
 </form>
+
+<%= link_to "Home", "/" %>
