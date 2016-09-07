@@ -1,12 +1,15 @@
 <form method="post" action="/placeholder_text">
 	<label for="user[number]">Number:</label>
 	<input type="text" placeholder="number" name="user[number]">
+	
 	<label for="user[select]">Select:</label>
 	<select name="user[select]">
 		<option value="words">Words</option>
 		<option value="paragraphs">Paragraphs</option>
 	</select>
+	
 	<button>Submit</button>
+	
 	<input type="hidden" name="authenticity_token"
       value="<%= form_authenticity_token %>">
 </form>
