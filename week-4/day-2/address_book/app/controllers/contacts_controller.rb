@@ -23,6 +23,11 @@ class ContactsController < ApplicationController
 
 	def show
 		@contact = Contact.find_by(id: params[:id])
-		render 'show'
+	end
+
+	def favorites
+		@contact = Contact.find_by(id: params[:id])
+		@contact.update_attribute(:favorites => true)
+		redirect_to("/contacts/favorites")
 	end
 end

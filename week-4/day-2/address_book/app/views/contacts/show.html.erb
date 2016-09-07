@@ -7,3 +7,9 @@
 </ul>
 
 <%= link_to 'Back to contacts', contacts_path %>
+
+<form action="/contacts/favorites" method="post">
+	<%= button_to "Add to Favorites", { :controller => "contacts", :action => "favorites"} %>
+	<input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
