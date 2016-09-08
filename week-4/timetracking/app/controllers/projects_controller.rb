@@ -16,6 +16,13 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
-		
+		#create a new project from the parameters passed in the form
+		project = Project.new(
+			name: params[:project][:name],
+			description: params[:project][:description]
+			)
+		project.save
+
+		redirect_to "/projects/#{project.id}"
 	end
 end
