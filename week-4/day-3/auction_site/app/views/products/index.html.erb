@@ -3,11 +3,10 @@
 <% @products.each do |product| %>
 	<li>
 		Title: <%= product.title %>
-		Description: <%= product.description %>
-		Deadline: <%= product.deadline %>
+		<%= link_to 'View Product', user_products_show_path(product.id)%>
 	</li>
 <% end %>
 </ul>
 <br>
 <br>
-<%= link_to "Add new product", "/users/:user_id/products/new" %>
+<%= link_to "Add new product", user_products_new_path %>

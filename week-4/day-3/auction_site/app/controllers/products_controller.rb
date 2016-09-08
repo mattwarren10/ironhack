@@ -6,13 +6,13 @@ class ProductsController < ApplicationController
 	end
 
 	def new 
-		# 1. find the user
-		# 2. add user
 		@user = User.find(params[:user_id])
 		@product = @user.products.new
 	end
 
 	def show
+		user = User.find(params[:user_id])
+		@product = user.products.find(:user_id)
 	end
 
 	def create
