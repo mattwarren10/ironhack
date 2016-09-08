@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   get '/projects', to: 'projects#index'
 
-  get '/projects/:id', toL 'projects#show'
+  get '/projects/:id', to: 'projects#show'
 end
