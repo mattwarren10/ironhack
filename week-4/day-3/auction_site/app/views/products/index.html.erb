@@ -1,6 +1,13 @@
 <h2>All Products</h2>
+<ul>
 <% @products.each do |product| %>
-	<%= product.title %>
-	<%= product.description %>
-	<%= product.deadline %>
+	<li>
+		Title: <%= product.title %>
+		Description: <%= product.description %>
+		Deadline: <%= product.deadline %>
+	</li>
 <% end %>
+</ul>
+<br>
+<br>
+<%= link_to "Add new product", "/users/:user_id/products/new" %>
