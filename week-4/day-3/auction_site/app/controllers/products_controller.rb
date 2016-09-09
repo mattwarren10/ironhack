@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
 
 	def index
-		user = User.find(params[:user_id])
-		@products = user.products
+		@user = User.find(params[:user_id])
+		@products = @user.products
 	end
 
 	def new 
