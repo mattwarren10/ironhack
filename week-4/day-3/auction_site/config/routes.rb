@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
 
-	root :to => 'products#index'
+	root :to => 'site#index'
 	resources :users do 
 		resources :products
 	end

@@ -1,12 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-  	if params[:user_id]
   		@user = User.find(params[:user_id])
   		@products = @user.products
-  	else
-    	@products = Product.all
-	end
   end
 
   def new
