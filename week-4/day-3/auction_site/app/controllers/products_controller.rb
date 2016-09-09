@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+  	@user = User.find(params[:user_id])
+    @products = @user.products
   end
 
   def new
@@ -19,10 +20,11 @@ class ProductsController < ApplicationController
 
     product.save
 
-    redirect_to "/"
+    redirect_to user_products_path(user)
   end
 
   def show
-  	@products = Product.find(params[:id])
+  	@user = User.find(params[:user_id])
+  	@product = @user.products.find(params[:id])
   end
 end

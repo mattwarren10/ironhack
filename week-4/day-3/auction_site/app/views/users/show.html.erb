@@ -1,9 +1,5 @@
 <h1>Details for <%= @user.name %></h1>
-<ul>
-	<% @user.products.each do |product| %>
-		<li><%= product.title %>: <%= product.description %></li>
-	<% end %>
-</ul>
 
 <%= link_to 'Home', root_path %>
 <%= link_to 'Add Product', new_user_product_path(@user) %>
+<%= link_to 'List of Products', user_products_path(@user) %>
