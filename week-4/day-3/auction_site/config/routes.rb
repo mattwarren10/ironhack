@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # Product actions
   get "/users/:user_id/products/new", to: "products#new"
   post "/user/:user_id/products", to: "products#create", as: :user_products
+  
 end
