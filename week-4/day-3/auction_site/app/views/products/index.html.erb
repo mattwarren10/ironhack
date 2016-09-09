@@ -1,12 +1,13 @@
-<h2>All Products for <%= @user.name %> </h2>
+<h1>Auction Site</h1>
+
 <ul>
 <% @products.each do |product| %>
-	<li>
-		Title: <%= product.title %>
-		<%= link_to 'View Product', user_products_show_path(product.id)%>
-	</li>
+  <li>
+    <%= product.title %> -
+    <%= product.description %> -
+    <%= product.deadline %>
+  </li>
 <% end %>
 </ul>
-<br>
-<br>
-<%= link_to "Add new product", user_products_new_path %>
+
+<% link_to 'Add Product', user_products_path(:user_id) %>

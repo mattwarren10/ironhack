@@ -1,8 +1,16 @@
-Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/users/:user_id/products', to: 'products#index',as: 'products'
-  get '/users/:user_id/products/new', to: 'products#new', as: 'user_products_new'
-  post '/users/:user_id/products', to: 'products#create', as: 'user_products'
-  get '/users/:user_id/products/product.id', to: 'products#show', as: 'user_products_show'
 
+Rails.application.routes.draw do
+
+  get 'home_page/index'
+
+  get "/", to: "products#index"
+
+  # User actions
+  get "/users/new", to: "users#new"
+  get "/users/:id", to: "users#show"
+  post "/users", to: "users#create"
+
+  # Product actions
+  get "/users/:user_id/products/new", to: "products#new"
+  post "/user/:user_id/products", to: "products#create", as: :user_products
 end

@@ -9,3 +9,5 @@
 User.create(name: "Mark Hamil", email: "mark@email.com")
 User.create(name: "Jeff Richards", email: "jeff@email.com")
 User.create(name: "Adrian Williams", email: "adrian@email.com")
+User.create(name: "Eric Matthews", email: "eric@email.com")
+
