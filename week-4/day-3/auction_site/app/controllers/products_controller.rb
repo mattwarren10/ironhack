@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
 	def show
 		user = User.find(params[:user_id])
-		@product = user.products.find(:user_id)
+		@product = user.products.find_by(id: params[:user_id])
 	end
 
 	def create
