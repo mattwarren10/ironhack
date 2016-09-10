@@ -4,5 +4,14 @@
 		<li><%= @product.description %></li>
 		<li><%= @product.deadline %></li>
 </ul>
+
+<%= form_for [@user, @product] do |f| %>
+	<%= f.label :email %>
+  	<%= f.text_field :email %>
+  <br>
+  	<%= f.label :bid %>
+  	<%= f.number_field :bid %>
+<% end %>
+
 <%= link_to 'Back to list', user_products_path %>
 <%= link_to 'Home', root_path %>
