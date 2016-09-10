@@ -8,9 +8,11 @@
 <%= form_for [@user, @product] do |f| %>
 	<%= f.label :email %>
   	<%= f.text_field :email %>
-  <br>
+  	<br>
   	<%= f.label :bid %>
   	<%= f.number_field :bid %>
+  	<br>
+  	<%= f.submit "Submit" %>
 <% end %>
 
 <%= link_to 'Back to list', user_products_path %>

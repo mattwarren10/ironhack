@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 	root :to => 'site#index'
 	resources :users do 
 		resources :products
+		resources :bids
 	end
 
 
