@@ -1,8 +1,11 @@
 <div class="yield">
 	<h2>Welcome! Concerts happening today:</h2>
-	<ul>
-		<% @date_until_today.each do |concert| %>
-			<li><%= concert.artist %></li><br>
+	<ul><% if @date_until_today.length > 0 %>
+			<% @date_until_today.each do |concert| %>
+				<li><%= concert.artist %></li><br>
+			<% end %>
+		<% else %>
+			<li>No concerts today</li>
 		<% end %>
 	</ul>
 	<br>
