@@ -5,4 +5,9 @@ class SitesController < ApplicationController
 		@date_until_today = Concert.where("date >= ?", Time.now).where("date <= ?", Time.now.end_of_day)
 	end
 
+	def price
+		@concerts = Concert.where("price <= ?", params[:number])
+		
+	end
+
 end

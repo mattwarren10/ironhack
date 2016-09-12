@@ -10,7 +10,13 @@
 	</ul>
 	<br>
 	<%= link_to "Add New Concert", new_concert_path %>
+	<h3>Search concerts by price</h3>
+	<form action="/price" method="get">
+		<input type="number" name="number">
+		<button>Submit</button>
+	</form>
 </div>
 <div class="aside">
 	<%= render "fixed_sections/aside" %>
 </div>
+

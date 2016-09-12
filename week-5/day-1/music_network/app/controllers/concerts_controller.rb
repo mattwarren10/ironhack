@@ -22,4 +22,8 @@ class ConcertsController < ApplicationController
 		@concert = Concert.find_by(id: params[:id])
 		@comment = Comment.new
 	end
+
+	def price
+		
+	end
 end

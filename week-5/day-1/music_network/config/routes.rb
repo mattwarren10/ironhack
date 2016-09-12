@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :concerts do 
   	resources :comments
   end
+
+  get '/price', to: 'sites#price'
 end
