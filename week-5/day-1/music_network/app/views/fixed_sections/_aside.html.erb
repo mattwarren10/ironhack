@@ -1,4 +1,4 @@
 <h3>Concerts later this month</h3>
 <% @date_within_one_month.each do |concert| %>
-		<%= concert.artist %><br>
+		<%= link_to concert.artist, concert_path(concert) %><br>
 <% end %>

@@ -17,4 +17,8 @@ class ConcertsController < ApplicationController
 		concert.save
 		redirect_to root_path
 	end
+
+	def show
+		@concert = Concert.find_by(id: params[:id])
+	end
 end
