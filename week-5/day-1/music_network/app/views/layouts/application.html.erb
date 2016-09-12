@@ -11,7 +11,8 @@
   <body>
   	<%= render "fixed_sections/header" %>
   	<%= render "fixed_sections/nav" %>
-    <%= yield %>
+    <div class="yield"><%= yield %></div>
+    <div class="aside"><%= render "fixed_sections/aside" %></div>
   	<%= render "fixed_sections/footer" %>
   </body>
 </html>
