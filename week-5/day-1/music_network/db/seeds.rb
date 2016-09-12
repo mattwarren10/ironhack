@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+kanye_west = Concert.create!(artist: "Kanye West", venue: "American Airlines Arena", city: "Miami", date: Time.now, price: 75, description: "Kanye West: The Saint Pablo Tour")
