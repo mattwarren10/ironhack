@@ -1,4 +1,13 @@
-<h2>Welcome!</h2>
-<% @concerts.each do |concert| %>
-	<%= concert.artist %><br>
-<% end %>
+<div class="yield">
+	<h2>Welcome!</h2>
+	<ul>
+		<% @concerts.each do |concert| %>
+			<li><%= concert.artist %></li><br>
+		<% end %>
+	</ul>
+	<br>
+	<%= link_to "Add New Concert", new_concert_path %>
+</div>
+<div class="aside">
+	<%= render "fixed_sections/aside" %>
+</div>
