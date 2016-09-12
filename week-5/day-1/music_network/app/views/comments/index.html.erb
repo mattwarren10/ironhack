@@ -1,7 +1,10 @@
 <h3><%= @concert.artist %> Concert</h3>
+<%= link_to "View Concert Info", concert_path(@concert) %>
 <h4>Comments</h4>
 <% @comments.each do |comment| %>
 	<%= comment.author %> says:
 	<%= comment.content %>
 	<%= comment.date %>
 <% end %>
+
+
