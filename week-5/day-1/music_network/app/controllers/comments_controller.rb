@@ -11,12 +11,13 @@ class CommentsController < ApplicationController
 	def create
 		concert = Concert.find(params[:concert_id])
 		comment = concert.comments.new(comments_params)
+		comment.date = Time.now
 		comment.save
 		redirect_to concert_comments_path
 	end
 
 	private
 	def comments_params
-		params.require(:comment).permit(:author, :date, :content)
+		params.require(:comment).permit(:author, :content)
 	end
 end
