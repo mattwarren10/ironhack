@@ -1,0 +1,7 @@
+<h3><%= @concert.artist %> Concert</h3>
+<h4>Comments</h4>
+<% @comments.each do |comment| %>
+	<%= comment.author %> says:
+	<%= comment.content %>
+	<%= comment.date %>
+<% end %>
