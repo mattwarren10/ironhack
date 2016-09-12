@@ -1,6 +1,6 @@
 <h3>Concerts later this month</h3>
 <% @concerts.each do |concert| %>
-	<% if concert.date > Date.today.advance(:months => 1)%>
+	<% if concert.date < Date.today.advance(:months => 1)%>
 		<%= concert.artist %><br>
 	<% end %>
 <% end %>
