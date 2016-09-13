@@ -3,4 +3,7 @@
  "I don't like cats."
  ];
 
- $(".phrases").html( phrases[Math.floor(parseInt(phrases.length) * Math.random())] );
+$(".random-phrase").on("click", function() {
+	$(".phrases").html( phrases[Math.floor(parseInt(phrases.length) * Math.random())] );	
+})
+ 
