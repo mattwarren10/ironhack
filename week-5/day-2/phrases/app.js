@@ -13,4 +13,9 @@ function addPhrase () {
 	phrases.push($("input").val());
 }
 
-input.on("change", addPhrase);
+// input.on("change", addPhrase);
+input.keypress(function(e) {
+    if(e.which == 13) {
+        addPhrase();
+    }
+});
