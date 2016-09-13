@@ -27,4 +27,7 @@ class ProductsController < ApplicationController
   	@user = User.find(params[:user_id])
   	@product = @user.products.find(params[:id])
   end
+
+  def update
+  end
 end
