@@ -14,14 +14,13 @@ function addPhrase () {
 }
 
 for(var i = 0; i < phrases.length; i++) {
-		$(".show-hide-phrases").append(phrases[i] + " ");
+		$(".show-hide-phrases").append(phrases[i] + "<br> ");
 }
 
 $("a").on("click", function(){
 	$(".show-hide-phrases").toggle();
 	$("a").html($('a').text() == 'Hide all comments.' ? 'Show all comments.' : 'Hide all comments.');
 })
-
 
 // input.on("change", addPhrase);
 input.keypress(function(e) {
