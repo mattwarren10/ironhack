@@ -5,14 +5,7 @@ $(document).ready(function(){
 
 });
 
-function addNewCharacter (theEvent) {
-	theEvent.preventDefault();
-	var name = $(".js-name").val();
-	var occupation = $(".js-occupation").val();
-	var weapon = $(".js-weapon").val();
-	console.log(`Name: ${name}, Occupation: ${occupation}, Weapon: ${weapon}`)
-}
-
+//Get the characters with an ajax request
 function fetchCharacters () {
 	//AJAX code here
 	$.ajax({
@@ -23,7 +16,34 @@ function fetchCharacters () {
 	});
 };
 
+//create obi wan character and send data
+function addObiWan () {
+	var newCharacter = {
+		name: "Obi Wan Kenobi",
+		occupation: "Jedi Knight",
+		weapon: "Light Sabor"
+	};
 
+	$.ajax({
+		type: "POST",
+		url: "https://ironhack-characters.herokuapp.com/characters",
+		data: newCharacter,
+		success: updateList,
+		error: handleError
+	});
+};
+
+
+//List the characters data in the console
+function addNewCharacter (theEvent) {
+	theEvent.preventDefault();
+	var name = $(".js-name").val();
+	var occupation = $(".js-occupation").val();
+	var weapon = $(".js-weapon").val();
+	console.log(`Name: ${name}, Occupation: ${occupation}, Weapon: ${weapon}`)
+}
+
+//List characteristics of each character in a list item
 function showCharacters (response) {
 	console.log("Success!");
 	var charactersArray = response;
@@ -38,28 +58,14 @@ function showCharacters (response) {
 	});
 }
 
-function handleError (error) {
-	console.log("Error!")
-	console.log(error.statusText);
-}
-
-function addObiWan () {
-	var newCharacter = {
-		name: "Obi Wan Kenobi",
-		occupation: "Jedi Knight",
-		weapon: "Light Sabor"
-	};
-
-	$.ajax({
-		type: "POST",
-		url: "https://ironhack-characters.herokuapp.com/characters",
-		data: newCharacter,
-		success: updateList,
-		error: handleError
-	})
-}
-
+//ajax callback function on success
 function updateList (response) {
 	console.log("Create Obi Wan Success");
 	console.log(response);
+}
+
+//ajax callback function on failure
+function handleError (error) {
+	console.log("Error!")
+	console.log(error.statusText);
 }
