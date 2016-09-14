@@ -22,6 +22,9 @@ function showArtist(response) {
 		var html = `
 			<li>${theArtist.name}</li>
 		`;
+		theArtist.images.forEach(function (image) {
+			html +=	`<img src="${image.url}">`
+		})
 		$(".js-place-artist").append(html);
 	})
 
