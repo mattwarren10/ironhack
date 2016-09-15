@@ -19,7 +19,7 @@ function searchAlbums(e) {
 	e.preventDefault();
 	var currentT = $(e.currentTarget)
 	console.log(e.currentTarget)
-	var id = currentT.data("id");
+	var id = currentT.data("artist-id");
 	console.log(id)
 	$.ajax({
 		type: "GET",
@@ -30,35 +30,62 @@ function searchAlbums(e) {
 	})
 }
 
+function searchTracks(e) {
+	e.preventDefault();
+	var currentT = $(e.currentTarget)
+	console.log(e.currentTarget)
+	var id = currentT.data("album-id");
+	console.log(id)
+	$.ajax({
+		type: "GET",
+		url: `https://api.spotify.com/v1/albums/${id}/tracks`,
+		success: showTracks,
+		error: handleError
+	})
+}
+
 function showArtist(response) {
-	console.log("Success!");
+	console.log("showArtist:");
 	// console.log(response)
 	var spotifyResults = response;
 	$('.js-place-artist').empty();
 	spotifyResults.artists.items.forEach(function(theArtist){
 		var html = `
-			<li><a class="artist-li" data-id="${theArtist.id}" href="#">${theArtist.name}</a></li>
+			<li><a class="artist-a" data-artist-id="${theArtist.id}" href="#">${theArtist.name}</a></li>
 		`;
 		theArtist.images.forEach(function (image) {
 			html +=	`<img src="${image.url}">`
 		})
 		$(".js-place-artist").append(html);
 	})
-	$(".artist-li").on("click", searchAlbums)
+	$(".artist-a").on("click", searchAlbums)
 }
 
 function showAlbum(response) {
-	console.log("Good to go.")
-	console.log(response)
-	
+	console.log("showAlbum:")
+	// console.log(response)
 	var results = response;
 	$('.js-place-album').empty();
-	results.items.forEach(function (albumName){
-		var html = `<li>${albumName.name}</li>`;
+	results.items.forEach(function (album){
+		var html = `<li><a class="album-a" data-album-id="${album.id}" href="#">${album.name}</a></li>`;
 			
 		$('.js-place-album').append(html);
 	})
 	$('#myModal').modal('show');
+	$(".album-a").on("click", searchTracks)
+}
+
+function showTracks (response) {
+	console.log("showTracks:")
+	console.log(response)
+	$('.js-place-album').empty();
+	var results = response;
+	response.items.forEach(function(track){
+		var html = `<li><a class="track-a" data-track-id="${track.id}" href="${track.preview_url}" target=”_blank”>${track.name}</a></li>`;
+		$('.js-place-tracks').append(html);
+	})
+	$('#myModal').modal('show');
+
 }
 
 function handleError (error) {
