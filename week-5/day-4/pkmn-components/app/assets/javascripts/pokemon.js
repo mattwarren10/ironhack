@@ -16,10 +16,22 @@ PokemonApp.PokemonComponent = class {
 		})
 	}
 
+	renderImg () {
+		console.log("Add the image");
+
+		$.ajax({
+			type: "GET",
+			url: `/api/v1/sprite/${this.id}/`,
+			success: PokemonApp.showImg,
+			error: PokemonApp.handleError
+		})
+	}
+
+
 };
 
 PokemonApp.showPokemonModal = function(result) {
-	console.log(result);
+	// console.log(result);
 	$(".js-poke-name").html(result.name);
 	$(".js-poke-number").html(`#${result.pkdx_id}`);
 	$(".js-poke-height").html(result.height)
@@ -37,6 +49,12 @@ PokemonApp.showPokemonModal = function(result) {
 
 	$(".js-pokemon-modal").modal("show");
 };
+
+PokemonApp.showImg = function (result) {
+	console.log(result)
+	var imgInteger = result.id - 1
+	$(".js-poke-img").html(`<img src='http://pokeapi.co/media/img/${imgInteger}.png'>`)
+}
 
 PokemonApp.handleError = function(theError) {
 	console.log("Pokemon Component Error")
@@ -62,6 +80,7 @@ $(document).ready(function (){
 
 		var pokeComponent = new PokemonApp.PokemonComponent( theUri );
 		pokeComponent.render();
+		pokeComponent.renderImg();
 	});
 
 
