@@ -66,6 +66,7 @@ function showAlbum(response) {
 	// console.log(response)
 	var results = response;
 	$('.js-place-album').empty();
+	$('.js-place-tracks').empty();
 	results.items.forEach(function (album){
 		var html = `<li><a class="album-a" data-album-id="${album.id}" href="#">${album.name}</a></li>`;
 			
