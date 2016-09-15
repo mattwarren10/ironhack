@@ -32,12 +32,12 @@ function searchAlbums(e) {
 
 function showArtist(response) {
 	console.log("Success!");
-	console.log(response)
+	// console.log(response)
 	var spotifyResults = response;
+	$('.js-place-artist').empty();
 	spotifyResults.artists.items.forEach(function(theArtist){
 		var html = `
-			<li>${theArtist.name}</li>
-			<a class="artist-li" data-id="${theArtist.id}" href="#">${theArtist.name} albums</a>
+			<li><a class="artist-li" data-id="${theArtist.id}" href="#">${theArtist.name}</a></li>
 		`;
 		theArtist.images.forEach(function (image) {
 			html +=	`<img src="${image.url}">`
@@ -57,7 +57,6 @@ function showAlbum(response) {
 		var html = `<li>${albumName.name}</li>`;
 			
 		$('.js-place-album').append(html);
-		console.log(albumName.name);
 	})
 	$('#myModal').modal('show');
 }
