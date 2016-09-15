@@ -52,6 +52,7 @@ function showAlbum(response) {
 	console.log(response)
 	
 	var results = response;
+	$('.js-place-album').empty();
 	results.items.forEach(function (albumName){
 		var html = `<li>${albumName.name}</li>`;
 			
@@ -59,7 +60,6 @@ function showAlbum(response) {
 		console.log(albumName.name);
 	})
 	$('#myModal').modal('show');
-	
 }
 
 function handleError (error) {
