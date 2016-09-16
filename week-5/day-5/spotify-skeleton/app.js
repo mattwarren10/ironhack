@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$(".js-search-button").on("click", searchTracks)
 	$(".btn-play").on("click", playTrack)
 	$('audio').on('timeupdate', printTime);
+	$('.artist-link').on("click", showModalBox)
 })
 
 function searchTracks (e) {
@@ -44,14 +45,17 @@ function pauseTrack () {
 	$(".btn-play").on("click", playTrack);
 }
 
+function showModalBox(e) {
+	e.preventDefault();
+	$('.js-modal').modal("show");
+}
+
+// Have printTime be called when the time is updated
 function printTime () {
 	$('progress').val(0);
     var current = $('audio').prop('currentTime');
     $('progress').val(current);
 }
-
-// Have printTime be called when the time is updated
-
 
 
 function handleError (error) {
