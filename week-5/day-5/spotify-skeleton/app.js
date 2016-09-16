@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	$(".js-search-button").on("click", searchTracks)
-	$(".btn-play").on("click", playTrack)
+	$(".js-search-button").on("click", searchTracks);
+	$(".btn-play").on("click", playTrack);
 	$('audio').on('timeupdate', printTime);
-	$('.artist-link').on("click", searchArtistDetails)
+	$('.artist-link').on("click", searchArtistDetails);
 })
 
 function searchTracks (e) {
@@ -19,10 +19,13 @@ function searchTracks (e) {
 
 function searchArtistDetails(e) {
 	e.preventDefault()
-	var currentT = $(e.currentTarget)
+	// var currentT = $(e.currentTarget)
 	console.log(e.currentTarget)
-	var id = currentT.data("id");
+	console.log($(e.currentTarget).data("id"))
+	var id = $('.artist-link').data("id");
+	console.log("aaaaaaaa")
 	console.log(id);
+
 	$.ajax({
 		type: "GET",
 		url: `https://api.spotify.com/v1/artists/${id}`,
@@ -33,18 +36,19 @@ function searchArtistDetails(e) {
 
 function getTracks (response) {
 	// console.log("getTracks:")
-	console.log(response)
+	// console.log(response)
 	var trackName = response.tracks.items[0].name
 	var artistId = response.tracks.items[0].artists[0].id
 	var previewUrl = response.tracks.items[0].preview_url
 	var trackArtist = response.tracks.items[0].artists[0].name
 	var albumImg = response.tracks.items[0].album.images[0].url
+	
 	$(".title").html(trackName);
 	$(".artist-link").html(trackArtist);
 	$(".js-img").attr("src", albumImg);
 	$(".js-audio").attr("src", previewUrl);
 	$(".btn-play").removeClass("disabled").addClass("enabled")
-	$(".artist-link").attr("data-id", artistId);
+	$(".artist-link").data("id", artistId);
 }
 
 function playTrack() {
@@ -62,16 +66,27 @@ function pauseTrack () {
 
 function showModalBox(response) {
 	console.log("showModalBox:")
-	console.log(response)
+	$('.modal-header').empty();
+	$('.artist-photo').remove();
+	$('.artist-info').empty();
+	console.log(response);
 	var artistTitle = response.name;
+	console.log(artistTitle);
 	var albumPhoto = response.images[0].url;
-	var genres;
+	var genres = [];
 	response.genres.forEach(function (genre){
-		genre.append(`${genre} `);
+		genres.push(`${genre} `);
 	})
 	var followers = response.followers.total;
 	var popularity = response.popularity;
 	$('.modal-header').append(`<h1>${artistTitle}</h1>`);
+	$('.js-img-artist').prepend(`<img class="artist-photo" src="${albumPhoto}">`)
+	$('.artist-info').append(`<li>Artist: ${artistTitle}`);
+	$('.artist-info').append(`<li>Genres: ${genres}`);
+	$('.artist-info').append(`<li>Followers: ${followers}`);
+	$('.artist-info').append(`<li>Popularity: ${popularity}`);
+
+
 
 	$('.js-modal').modal("show");
 }
