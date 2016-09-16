@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(".js-search-button").on("click", searchTracks)
 	$(".btn-play").on("click", playTrack)
+	$('audio').on('timeupdate', printTime);
 })
 
 function searchTracks (e) {
@@ -16,8 +17,8 @@ function searchTracks (e) {
 }
 
 function getTracks (response) {
-	console.log("getTracks:")
-	console.log(response)
+	// console.log("getTracks:")
+	// console.log(response)
 	var trackName = response.tracks.items[0].name
 	var trackId = response.tracks.items[0].id
 	var previewUrl = response.tracks.items[0].preview_url
@@ -34,6 +35,7 @@ function playTrack() {
 	$("audio").trigger('play');
 	$(".btn-play").addClass("playing")
 	$(".btn-play").on("click", pauseTrack);
+
 }
 
 function pauseTrack () {
@@ -41,6 +43,15 @@ function pauseTrack () {
 	$(".btn-play").removeClass("playing");
 	$(".btn-play").on("click", playTrack);
 }
+
+function printTime () {
+	$('progress').val(0);
+    var current = $('audio').prop('currentTime');
+    $('progress').val(current);
+}
+
+// Have printTime be called when the time is updated
+
 
 
 function handleError (error) {
