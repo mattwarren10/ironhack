@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$(".js-search-button").on("click", searchTracks)
+	$(".btn-play").on("click", playTrack)
 })
 
 function searchTracks (e) {
@@ -24,7 +25,21 @@ function getTracks (response) {
 	var albumImg = response.tracks.items[0].album.images[0].url
 	$(".title").html(trackName);
 	$(".author").html(trackArtist);
-	$(".js-img").attr("src", albumImg)
+	$(".js-img").attr("src", albumImg);
+	$(".js-audio").attr("src", previewUrl);
+	$(".btn-play").removeClass("disabled").addClass("enabled")
+}
+
+function playTrack() {
+	$("audio").trigger('play');
+	$(".btn-play").addClass("playing")
+	$(".btn-play").on("click", pauseTrack);
+}
+
+function pauseTrack () {
+	$("audio").trigger('pause');
+	$(".btn-play").removeClass("playing");
+	$(".btn-play").on("click", playTrack);
 }
 
 
