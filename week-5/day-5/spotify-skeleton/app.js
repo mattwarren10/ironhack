@@ -21,9 +21,10 @@ function getTracks (response) {
 	var trackId = response.tracks.items[0].id
 	var previewUrl = response.tracks.items[0].preview_url
 	var trackArtist = response.tracks.items[0].artists[0].name
-	var trackImg = response.tracks.items[0].album.images[0].url
+	var albumImg = response.tracks.items[0].album.images[0].url
 	$(".title").html(trackName);
-	$(".author").html(trackArtist)
+	$(".author").html(trackArtist);
+	$(".js-img").attr("src", albumImg)
 }
 
 
