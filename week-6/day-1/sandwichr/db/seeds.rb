@@ -14,7 +14,4 @@ ingredient1 = Ingredient.create!(name: "cheese", calories: 80)
 ingredient2 = Ingredient.create!(name: "tomatoes", calories: 30)
 ingredient3 = Ingredient.create!(name: "olives", calories: 50)
 
-sandwich1.ingredients.push(ingredient1)
-sandwich1.ingredients.push(ingredient2)
-sandwich1.ingredients.push(ingredient3)
 

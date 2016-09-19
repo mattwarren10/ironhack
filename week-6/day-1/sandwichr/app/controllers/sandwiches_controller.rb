@@ -17,7 +17,7 @@ class SandwichesController < ApplicationController
 				status: 404
 			return
 		end
-		render json: sandwich
+		render json: sandwich.to_json(:include => :ingredients)
 	end
 
 	def update
@@ -39,6 +39,15 @@ class SandwichesController < ApplicationController
 			return
 		end
 		sandwich.destroy
+		render json: sandwich
+	end
+
+	def add_ingredient
+		sandwich = Sandwich.find_by(id: params[:sandwich_id])
+		ingredient = Ingredient.find_by(id: params[:id])
+		sandwich.ingredients.push( ingredient )
+		sandwich.total_calories += ingredient.calories
+		sandwich.save
 		render json: sandwich
 	end
 
