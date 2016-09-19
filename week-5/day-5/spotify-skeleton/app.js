@@ -82,7 +82,7 @@ function showModalBox(response) {
 	$('.modal-header').append(`<h1>${artistTitle}</h1>`);
 	$('.js-img-artist').prepend(`<img class="artist-photo" src="${albumPhoto}">`)
 	$('.artist-info').append(`<li>Artist: ${artistTitle}`);
-	$('.artist-info').append(`<li>Genres: ${genres}`);
+	$('.artist-info').append(`<li>Genres: ${genres[0]}`);
 	$('.artist-info').append(`<li>Followers: ${followers}`);
 	$('.artist-info').append(`<li>Popularity: ${popularity}`);
 

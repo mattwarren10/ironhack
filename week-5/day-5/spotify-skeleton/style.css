@@ -163,3 +163,8 @@ progress::-moz-progress-bar {
 .artist-info {
   list-style-type: none;
 }
+
+.search-form {
+  width: 25%;
+  margin-left: 39.33%;
+}
