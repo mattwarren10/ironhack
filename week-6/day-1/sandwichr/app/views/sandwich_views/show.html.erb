@@ -1,5 +1,10 @@
 <h2><%= @sandwich.name %></h2>
 <p>Bread Type: <%= @sandwich.bread_type %></p>
 <p>Total Calories: <%= @sandwich.total_calories %></p>
-
+<h3>Ingredients: </h3>
+<ul>
+	<% @sandwich.ingredients.each do |ingredient| %>
+		<li><%= ingredient.name %></li>
+	<% end %>
+</ul>
 <%= link_to "Go back", "/sandwiches" %>
