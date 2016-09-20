@@ -16,5 +16,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 		#to logout (delete a session)
+		session.clear
+		redirect_to '/'
 	end
 end
