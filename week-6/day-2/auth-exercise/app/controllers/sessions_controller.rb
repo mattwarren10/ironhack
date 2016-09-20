@@ -1,11 +1,9 @@
 class SessionsController < ApplicationController
+	before_action :user_setup, only: [:new]
+	before_action :redirect_if_already_logged_in, only: [:new]
 	def new
 		#for the login form
-		if @current_user
-	      redirect_to "/"
-	    else
-	      render :new
-	    end
+		#redirect_if_already_logged_in
 	end
 
 	def create

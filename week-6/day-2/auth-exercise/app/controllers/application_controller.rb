@@ -13,4 +13,18 @@ class ApplicationController < ActionController::Base
       @name = "Ironhack"
     end
   end 
+
+  def redirect_if_not_logged_in
+  	if @current_user == nil
+  		flash[:message] = "You need to log in to visit that page."
+  		redirect_to "/login"
+  	end
+  end
+
+  def redirect_if_already_logged_in
+  	if @current_user
+  		flash[:message] = "You are already logged in."
+  		redirect_to '/'
+  	end
+  end
 end
