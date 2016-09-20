@@ -15,6 +15,6 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new' #displayes the login form
   post '/login' => 'sessions#create' #log in
-  delete '/login' => 'sessions#destroy' #log out
+  delete '/logout' => 'sessions#destroy' #log out
 
 end

@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
 
   # renders the home page
-def home
-  @name = current_user ? @current_user.username : "Ironhacker"
-end
+  def home
+    @current_user = User.find_by(id: session[:user_id])
+
+    if @current_user 
+      @name = @current_user.username
+    else
+      @name = "Ironhack"
+    end
+  end
 
   def index
     @users = User.all
