@@ -6,8 +6,8 @@ $(document).on("turbolinks:load", function () {
 
  function addIngredient (e) {
   	e.preventDefault();
-  	console.log(e.currentTarget)
-	console.log($(e.currentTarget).data("ingredient-id"))
+ //  	console.log(e.currentTarget)
+	// console.log($(e.currentTarget).data("ingredient-id"))
 	var ingredientId = $(e.currentTarget).data('ingredient-id')
 	var sandwichId = $('.js-sandwich').data('sandwich-id')
 	var ingredient = $(e.currentTarget).text()
