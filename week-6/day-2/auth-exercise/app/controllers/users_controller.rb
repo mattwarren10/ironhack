@@ -2,13 +2,7 @@ class UsersController < ApplicationController
 
   # renders the home page
   def home
-    @current_user = User.find_by(id: session[:user_id])
-
-    if @current_user 
-      @name = @current_user.username
-    else
-      @name = "Ironhack"
-    end
+    user_setup
   end
 
   def index
@@ -20,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    user_setup
   end
 
   # receives form and creates a user from that data
