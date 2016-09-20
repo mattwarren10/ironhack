@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
 	def new
 		#for the login form
+		if @current_user
+	      redirect_to "/"
+	    else
+	      render :new
+	    end
 	end
 
 	def create
