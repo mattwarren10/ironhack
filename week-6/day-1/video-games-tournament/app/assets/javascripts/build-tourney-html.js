@@ -2,8 +2,8 @@ function buildTourneyHtml (tournament) {
   return '\
     <li>\
       <a href="/tournaments/' + tournament.id + '">' + tournament.name + '</a>\
-    </li>\
     <button class="delete" data-hook="tourney-delete" type="submit" name="tournament" value="'+  tournament.id + '">DELETE</button>\
+    </li>\
   '
 }
 
@@ -15,8 +15,13 @@ function deleteTournament (e) {
 	var request = $.ajax({
       url: '/api/tournaments',
       type: 'DELETE',
-      data: {id: tournamentId}
+      data: {id: tournamentId},
+      success: updateDom
     });
 
-    buildTourneyHtml()
+}
+
+function updateDom (response) {
+  console.log(response)
+  $('li a').remove;
 }
