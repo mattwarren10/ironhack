@@ -1,8 +1,8 @@
 class IngredientsController < ApplicationController
 	protect_from_forgery with: :null_session
 	def index
-		sandwich = Sandwich.find_by(id: params[:sandwich_id])
-		render json: sandwich.ingredients
+		ingredients = Ingredient.all
+		render json: ingredients
 	end
 
 	def create 
@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
 
 	def show 
 		ingredient = Ingredient.find_by(id: params[:id])
-		unless sandwich
+		unless ingredient
 			render json: {error: "ingredient not found"},
 				status: 404
 			return
