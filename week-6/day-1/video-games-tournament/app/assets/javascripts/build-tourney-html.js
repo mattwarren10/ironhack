@@ -10,8 +10,10 @@ function buildTourneyHtml (tournament) {
 $('.ctrl-tournaments.actn-index').on('click', '[data-hook~=tourney-delete]', deleteTournament )
 
 function deleteTournament (e) {
-	var tournamentId = $('.delete').val()
+  console.log(tournamentId)
+	var tournamentId = $(e.currentTarget).val();
 	e.preventDefault
+  $(e.currentTarget).prop("id", "just-clicked")
 	var request = $.ajax({
       url: '/api/tournaments',
       type: 'DELETE',
@@ -23,5 +25,6 @@ function deleteTournament (e) {
 
 function updateDom (response) {
   console.log(response)
-  $('li a').remove;
+  // $('.tourney-list').empty()
+  $('#just-clicked').parent().remove()
 }
