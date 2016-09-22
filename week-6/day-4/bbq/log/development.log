@@ -2148,3 +2148,123 @@ Processing by UsersController#show as HTML
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered users/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2016-09-22 16:16:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-92b92f02f19d78a826bd00534c615dc57caf4629e3c2151c1dbe9edecbe69854.css?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/moment.self-0da3eb4ebf8fb8c3113d89afb90e5b7a87760d21b5b39a405a51fe05c8e40fd8.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/barbecues.self-769ad38923b78222da246dbdb074130da45744a25aca2328728f5e162936500c.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-22 16:16:01 -0400
+
+
+Started GET "/users/1" for ::1 at 2016-09-22 16:16:13 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-92b92f02f19d78a826bd00534c615dc57caf4629e3c2151c1dbe9edecbe69854.css?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/moment.self-0da3eb4ebf8fb8c3113d89afb90e5b7a87760d21b5b39a405a51fe05c8e40fd8.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/barbecues.self-769ad38923b78222da246dbdb074130da45744a25aca2328728f5e162936500c.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-22 16:16:13 -0400
+
+
+Started GET "/users/1" for ::1 at 2016-09-22 16:16:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-92b92f02f19d78a826bd00534c615dc57caf4629e3c2151c1dbe9edecbe69854.css?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/moment.self-0da3eb4ebf8fb8c3113d89afb90e5b7a87760d21b5b39a405a51fe05c8e40fd8.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/barbecues.self-769ad38923b78222da246dbdb074130da45744a25aca2328728f5e162936500c.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2016-09-22 16:16:44 -0400
+
+
+Started GET "/users/1" for ::1 at 2016-09-22 16:17:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-92b92f02f19d78a826bd00534c615dc57caf4629e3c2151c1dbe9edecbe69854.css?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/barbecues.self-769ad38923b78222da246dbdb074130da45744a25aca2328728f5e162936500c.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
+
+
+Started GET "/assets/moment.self-0da3eb4ebf8fb8c3113d89afb90e5b7a87760d21b5b39a405a51fe05c8e40fd8.js?body=1" for ::1 at 2016-09-22 16:17:02 -0400
