@@ -17,6 +17,16 @@ class BarbecuesController < ApplicationController
     @bbq = Barbecue.new
   end
 
+  def get_api
+    barbecue = Barbecue.find(params[:id])
+    unless barbecue
+      render json: {error: "barbecue not found"},
+        status: 404
+      return
+    end
+    render json: barbecue
+  end
+
   def create
     bbq_params = params.require(:barbecue).permit(:title, :venue, :date)
     @bbq = Barbecue.new(bbq_params)
