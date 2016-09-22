@@ -509,3 +509,36 @@ Migrating to DeviseCreateUsers (20160922185225)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/users/sign_in" for ::1 at 2016-09-22 15:07:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/mattwarren/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /Users/mattwarren/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (358.4ms)
+Completed 200 OK in 3139ms (Views: 3118.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-92b92f02f19d78a826bd00534c615dc57caf4629e3c2151c1dbe9edecbe69854.css?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/assets/moment.self-0da3eb4ebf8fb8c3113d89afb90e5b7a87760d21b5b39a405a51fe05c8e40fd8.js?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/assets/barbecues.self-769ad38923b78222da246dbdb074130da45744a25aca2328728f5e162936500c.js?body=1" for ::1 at 2016-09-22 15:07:28 -0400
+
+
+Started GET "/users/sign_up" for ::1 at 2016-09-22 15:07:38 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/mattwarren/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/mattwarren/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
